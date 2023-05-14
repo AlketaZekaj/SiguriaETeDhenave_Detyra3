@@ -24,6 +24,11 @@ public class Client {
         generator.init(KEY_SIZE);
         key = generator.generateKey();
     }
+
+    public void initFromStrings(String secretKey, String IV) {
+        key = new SecretKeySpec(decode(secretKey), "AES");
+        this.IV = decode(IV);
+    }
     
 
 
