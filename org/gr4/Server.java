@@ -22,6 +22,8 @@ public class Server {
     public void init() throws Exception {
         KeyGenerator generator = KeyGenerator.getInstance("AES");
         generator.init(KEY_SIZE);
+        key = generator.generateKey();
+    }
 
     }
 }
