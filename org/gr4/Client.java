@@ -54,7 +54,7 @@ public static void main(String[] args) {
         try {
         Client client = new Client();
         client.initFromStrings("CHuO1Fjd8YgJqTyapibFBQ==","e3IYYJC2hxe24/EO");
-        String decryptedMessage = client.decrypt("mqQQF6K2GEaR0JKTd1yN58Mbs7qeYamM0xgung==");
+        String decryptedMessage = client.decrypt("ib4AP4jtI2eC16zyg0i3RMhobVj3jtXX+7JDepkCBxBKWEQ=");
         System.err.println("Decrypted Message : " + decryptedMessage);
         } catch (Exception ignored) {
         }
