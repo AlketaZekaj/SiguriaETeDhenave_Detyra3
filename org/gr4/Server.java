@@ -18,6 +18,10 @@ public class Server {
     private int KEY_SIZE = 128;
     private int T_LEN = 128;
     private byte[] IV;
+    
+    public void init() throws Exception {
+        KeyGenerator generator = KeyGenerator.getInstance("AES");
+        generator.init(KEY_SIZE);
 
     }
 }
