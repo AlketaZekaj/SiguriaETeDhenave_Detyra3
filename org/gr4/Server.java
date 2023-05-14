@@ -25,5 +25,7 @@ public class Server {
         key = generator.generateKey();
     }
 
+    public void initFromStrings(String secretKey, String IV) {    
+
     
 
