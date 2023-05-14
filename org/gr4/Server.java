@@ -14,8 +14,10 @@ import java.util.Base64;
 
 
 public class Server {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
+    private SecretKey key;
+    private int KEY_SIZE = 128;
+    private int T_LEN = 128;
+    private byte[] IV;
 
     }
 }
