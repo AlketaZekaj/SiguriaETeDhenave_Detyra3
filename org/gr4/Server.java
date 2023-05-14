@@ -25,5 +25,5 @@ public class Server {
         key = generator.generateKey();
     }
 
-    }
-}
+    
+
