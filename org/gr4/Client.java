@@ -24,6 +24,7 @@ public class Client {
         generator.init(KEY_SIZE);
         key = generator.generateKey();
     }
+    
 
 
     public String decrypt(String encryptedMessage) throws Exception {
@@ -34,5 +35,21 @@ public class Client {
         byte[] decryptedBytes = decryptionCipher.doFinal(messageInBytes);
         return new String(decryptedBytes);
         }
+    
+    public String decrypt(String encryptedMessage) throws Exception {
+        byte[] messageInBytes = decode(encryptedMessage);
+        Cipher decryptionCipher = Cipher.getInstance("AES/GCM/NoPadding");
+        GCMParameterSpec spec = new GCMParameterSpec(T_LEN, IV);
+        decryptionCipher.init(Cipher.DECRYPT_MODE, key, spec);
+        byte[] decryptedBytes = decryptionCipher.doFinal(messageInBytes);
+        return new String(decryptedBytes);
+        }
+
+
+private byte[] decode(String data) {
+        return Base64.getDecoder().decode(data);
+        }
+
+
 
 
