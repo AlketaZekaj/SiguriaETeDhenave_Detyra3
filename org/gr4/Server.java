@@ -49,7 +49,13 @@ public class Server {
 
 
     public static void main(String[] args) {
-
+        try {
+            Server server = new Server();
+            server.initFromStrings("CHuO1Fjd8YgJqTyapibFBQ==", "e3IYYJC2hxe24/EO");
+            String encryptedMessage = server.encrypt("TheXCoders_2");
+            System.err.println("Encrypted Message : " + encryptedMessage);
+        } catch (Exception ignored) {
+        }
         }
     }
 
